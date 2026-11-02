@@ -429,3 +429,7 @@ html[dir="rtl"] .hero__desc { font-weight: 500; }
 .xcard__tools-list span, .pill { unicode-bidi: plaintext; }
 [hidden] { display: none !important; }
 .bcard__logo { width: 60px; height: 60px; padding: 10px; border-radius: 16px; display: block; border: 1px solid color-mix(in srgb, var(--c) 35%, transparent); background: color-mix(in srgb, var(--c) 8%, transparent); }
+
+/* ---------- KARINA DISPLAY FONT: hero words + About name (Arabic falls back to Thmanyah) ---------- */
+@font-face { font-family: "Karina"; src: url("fonts/Karina.ttf") format("truetype"); font-weight: 400 900; font-display: swap; }
+.hero__title, .about__title { font-family: "Karina", var(--font); }
