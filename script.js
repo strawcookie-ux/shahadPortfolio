@@ -97,7 +97,7 @@
       })();
     }));
   }
-  const showSlots = /[?&]slots/.test(location.search);
+  const showSlots = !/[?&]clean/.test(location.search); // placeholders visible by default; add ?clean to hide empty ones
   $$('[data-img]').forEach((el) => {
     const code = el.dataset.img;
     if (!showSlots) el.classList.add('slot--pending'); else { el.textContent = code; el.title = code; }
