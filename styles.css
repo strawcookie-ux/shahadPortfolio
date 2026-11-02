@@ -428,3 +428,4 @@ html[dir="rtl"] .hero__desc { font-weight: 500; }
 .project.is-tall { position: relative; top: 0; }
 .xcard__tools-list span, .pill { unicode-bidi: plaintext; }
 [hidden] { display: none !important; }
+.bcard__logo { width: 60px; height: 60px; padding: 10px; border-radius: 16px; display: block; border: 1px solid color-mix(in srgb, var(--c) 35%, transparent); background: color-mix(in srgb, var(--c) 8%, transparent); }
