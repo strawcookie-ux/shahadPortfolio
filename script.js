@@ -135,7 +135,8 @@
   /* ---------- tech stack: falling, draggable tags ---------- */
   const stage = $('#stage');
   const tags = $$('.tag', stage);
-  if (reduced || matchMedia('(max-width: 760px)').matches) {
+  // physics runs even with reduced-motion on (it only moves when the section is visible); small screens get a static pile
+  if (matchMedia('(max-width: 480px)').matches) {
     stage.classList.add('is-static');
   } else {
     const bodies = [];
