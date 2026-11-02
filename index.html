@@ -1,0 +1,243 @@
+<!doctype html>
+<!--
+  TEXT:   edit content.js (both languages). Elements here use data-i18n="key".
+  IMAGES: every <... data-img="code"> is a picture slot. Drop a file named <code>.svg/.png/.webp/.jpg
+          into /images and it appears automatically. Until then the slot shows its code.
+-->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shahad Ashammari | Portfolio</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="top" class="site-shell">
+
+  <!-- HEADER -->
+  <header class="header header--dark" id="header">
+    <a class="header__brand" href="#top" aria-label="Home"><span class="slot slot--logo" data-img="logo-mark" data-fallback="SA"></span></a>
+    <nav class="header__nav" id="nav" aria-label="Primary">
+      <a href="#about" data-target="about" data-i18n="nav.about"></a>
+      <a href="#projects" data-target="projects" data-i18n="nav.projects"></a>
+      <a href="#experience" data-target="experience" data-i18n="nav.experience"></a>
+      <a href="#beyond-study" data-target="beyond-study" data-i18n="nav.volunteering"></a>
+    </nav>
+    <div class="header__actions">
+      <button class="header__lang" type="button" id="lang">AR</button>
+      <a class="header__contact" href="#contact" data-target="contact" data-i18n="nav.contact"></a>
+      <button class="header__menu" id="menu" type="button" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__aurora"><i class="glow glow--lime"></i><i class="glow glow--pink"></i><i class="glow glow--orange"></i></div>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__status"><span class="dot"></span><span data-i18n="hero.status"></span></div>
+      <h1 class="hero__title">
+        <span class="hero__line"><span class="word word--develop" tabindex="0"><span class="word__n" data-i18n="hero.w1"></span><span class="word__s" data-i18n="hero.w1s"></span></span></span>
+        <span class="hero__line"><span class="word word--design" tabindex="0"><span class="word__n" data-i18n="hero.w2"></span><span class="word__s" data-i18n="hero.w2s"></span></span></span>
+        <span class="hero__line"><span class="word word--create" tabindex="0"><span class="word__n" data-i18n="hero.w3"></span><span class="word__s" data-i18n="hero.w3s"></span></span></span>
+      </h1>
+      <p class="hero__desc" data-i18n="hero.desc"></p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projects"><span data-i18n="hero.cta1"></span><span class="btn__icon">→</span></a>
+        <a class="btn btn--secondary" id="cvBtn" href="files/cv.pdf" download hidden><span data-i18n="hero.cta2"></span><span class="btn__icon">↓</span></a>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__row" data-dir="1" data-speed="45"><div class="marquee__track" data-list="marquee.1" data-colors="pink|lime|orange|pink|lime"></div></div>
+      <div class="marquee__row" data-dir="-1" data-speed="38"><div class="marquee__track" data-list="marquee.2" data-colors="orange|pink|lime|orange|pink"></div></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__bg"><span class="about__glow"></span></div>
+    <div class="about__container">
+      <div class="about__content">
+        <span class="label label--pink reveal" data-i18n="about.label"></span>
+        <div class="about__title-row reveal">
+          <h2 class="about__title" data-i18n="about.name"></h2>
+          <a class="icon-btn" id="cvIcon" href="files/cv.pdf" download hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+            <span class="icon-btn__tip" data-i18n="about.cvTip"></span>
+          </a>
+        </div>
+        <div class="about__text reveal">
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+        </div>
+        <div class="about__certs reveal">
+          <div class="about__certs-head">
+            <span class="about__certs-label" data-i18n="about.certsTitle"></span>
+            <p class="about__certs-desc" data-i18n="about.certsDesc"></p>
+          </div>
+          <div class="about__certs-list">
+            <div class="cert cert--green"><div class="cert__side"><span class="cert__en" data-i18n="cert.1.issuer"></span><span class="cert__arrow">↗</span></div><div class="cert__info"><h3 class="cert__title" data-i18n="cert.1.title"></h3><div class="cert__meta" data-i18n="cert.1.meta"></div></div><span class="cert__mark"><span class="slot slot--fill" data-img="cert-1-logo"></span></span></div>
+            <div class="cert cert--pink"><div class="cert__side"><span class="cert__en" data-i18n="cert.2.issuer"></span><span class="cert__arrow">↗</span></div><div class="cert__info"><h3 class="cert__title" data-i18n="cert.2.title"></h3><div class="cert__meta" data-i18n="cert.2.meta"></div></div><span class="cert__mark"><span class="slot slot--fill" data-img="cert-2-logo"></span></span></div>
+            <div class="cert cert--green"><div class="cert__side"><span class="cert__en" data-i18n="cert.3.issuer"></span><span class="cert__arrow">↗</span></div><div class="cert__info"><h3 class="cert__title" data-i18n="cert.3.title"></h3><div class="cert__meta" data-i18n="cert.3.meta"></div></div><span class="cert__mark"><span class="slot slot--fill" data-img="cert-3-logo"></span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="about__visual reveal">
+        <div class="about__visual-glow"></div>
+        <div class="about__frame">
+          <i class="corner corner--top"></i><i class="corner corner--bottom"></i>
+          <span class="about__logo slot slot--big" data-img="about-logo" data-fallback="SA"></span>
+        </div>
+        <div class="about__caption"><span>PORTFOLIO</span><span>2026</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK (tag names are the same in both languages) -->
+  <section class="stack" id="skills">
+    <div class="stack__bg"><span class="stack__glow stack__glow--pink"></span><span class="stack__glow stack__glow--orange"></span><span class="stack__glow stack__glow--green"></span></div>
+    <header class="stack__heading reveal">
+      <span class="stack__eyebrow" data-i18n="skills.eyebrow"></span>
+      <h2 class="stack__title"><span data-i18n="skills.title1"></span><span class="accent" data-i18n="skills.title2"></span></h2>
+      <p class="stack__desc" data-i18n="skills.desc"></p>
+    </header>
+    <div class="stack__stage" id="stage">
+      <span class="tag tag--pink">Python</span><span class="tag tag--green">JavaScript</span><span class="tag tag--orange">GDScript</span><span class="tag tag--white">SQL</span><span class="tag tag--dark">Polars</span><span class="tag tag--orange">Hugging Face</span><span class="tag tag--pink">AI Agents</span><span class="tag tag--green">Machine Learning</span><span class="tag tag--dark">Deep Learning</span><span class="tag tag--white">MLOps</span><span class="tag tag--pink">Godot Engine</span><span class="tag tag--orange">UI/UX</span><span class="tag tag--green">Pixel Art</span><span class="tag tag--white">Illustrator</span><span class="tag tag--dark">Print Design</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="projects__heading reveal">
+      <span class="eyebrow" data-i18n="projects.eyebrow"></span>
+      <h2 class="projects__title" data-i18n="projects.title"></h2>
+    </div>
+    <div class="projects__stack">
+      <article class="project">
+        <div class="project__content">
+          <div class="project__logo"><span class="slot slot--plogo" data-img="project-1-logo"></span><span class="project__name" data-i18n="p1.name"></span></div>
+          <p class="project__desc" data-i18n="p1.desc"></p>
+          <div class="project__highlights">
+            <span class="hl hl--pink"><i></i><span data-i18n="p1.h1"></span></span><span class="hl hl--green"><i></i><span data-i18n="p1.h2"></span></span><span class="hl hl--orange"><i></i><span data-i18n="p1.h3"></span></span>
+          </div>
+        </div>
+        <div class="project__visual"><div class="project__shot"><span class="slot slot--cover" data-img="project-1-image"></span></div></div>
+      </article>
+      <article class="project">
+        <div class="project__content">
+          <div class="project__logo"><span class="slot slot--plogo" data-img="project-2-logo"></span><span class="project__name" data-i18n="p2.name"></span></div>
+          <p class="project__desc" data-i18n="p2.desc"></p>
+          
+        </div>
+        <div class="project__visual"><div class="project__shot"><span class="slot slot--cover" data-img="project-2-image"></span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="experience__heading reveal">
+      <span class="experience__eyebrow" data-i18n="exp.eyebrow"></span>
+      <h2 class="experience__title"><span data-i18n="exp.title1"></span><span class="accent" data-i18n="exp.title2"></span></h2>
+    </div>
+    <article class="xcard reveal">
+      <div class="xcard__intro">
+        <div class="xcard__top"><span class="xcard__type" data-i18n="exp.type"></span><span class="xcard__dur" data-i18n="exp.duration"></span></div>
+        <div class="xcard__company">
+          <div class="xcard__mark"><span class="slot slot--fill" data-img="experience-company-logo"></span></div>
+          <div><span class="xcard__role" data-i18n="exp.role"></span><h3 class="xcard__name" data-i18n="exp.company"></h3><span class="xcard__date" data-i18n="exp.date"></span></div>
+        </div>
+        <p class="xcard__desc" data-i18n="exp.desc"></p>
+        <div class="xcard__highlight"><span data-i18n="exp.achLabel"></span><p data-i18n="exp.ach"></p></div>
+      </div>
+      <div class="xcard__details">
+        <div class="xcard__areas">
+          <article class="area"><span class="area__n">01</span><div><h4 data-i18n="exp.a1t"></h4><p data-i18n="exp.a1d"></p></div></article>
+          <article class="area"><span class="area__n">02</span><div><h4 data-i18n="exp.a2t"></h4><p data-i18n="exp.a2d"></p></div></article>
+          <article class="area"><span class="area__n">03</span><div><h4 data-i18n="exp.a3t"></h4><p data-i18n="exp.a3d"></p></div></article>
+          <article class="area"><span class="area__n">04</span><div><h4 data-i18n="exp.a4t"></h4><p data-i18n="exp.a4d"></p></div></article>
+        </div>
+        <div class="xcard__tools">
+          <span class="xcard__tools-title" data-i18n="exp.toolsTitle"></span>
+          <div class="xcard__tools-list" data-list="exp.tools"></div>
+        </div>
+      </div>
+    </article>
+    <div class="xtrans">
+      <div class="xtrans__stage"><div class="xtrans__timeline"><span class="xtrans__track"></span><span class="xtrans__line" id="tline"></span><span class="xtrans__node" id="tnode"></span></div></div>
+      <div class="xtrans__panel">
+        <div class="xtrans__content">
+          <span class="xtrans__eyebrow" data-i18n="cta.eyebrow"></span>
+          <h3 class="xtrans__title"><span data-i18n="cta.title1"></span><span class="accent" data-i18n="cta.title2"></span></h3>
+          <p class="xtrans__desc" data-i18n="cta.desc"></p>
+          <a class="btn btn--primary" href="#contact"><span data-i18n="cta.btn"></span><span class="btn__icon">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOLUNTEERING -->
+  <section class="beyond" id="beyond-study">
+    <div class="beyond__wrapper">
+      <div class="beyond__heading reveal">
+        <div><span class="eyebrow" data-i18n="vol.eyebrow"></span><h2 class="beyond__title" data-i18n="vol.title"></h2></div>
+        <p class="beyond__desc" data-i18n="vol.desc"></p>
+      </div>
+      <div class="beyond__stats reveal">
+        <div class="stat"><strong id="volCount">03</strong><span data-i18n="vol.s1"></span></div>
+      </div>
+      <div class="beyond__grid">
+        <article class="bcard bcard--green reveal"><div class="bcard__inner"><div class="bcard__top"><span class="bcard__year" data-i18n="v1.year"></span><span class="bcard__role" data-i18n="v1.role"></span></div><h3 class="bcard__org" data-i18n="v1.org"></h3><p data-i18n="v1.desc"></p></div></article>
+        <article class="bcard bcard--pink reveal"><div class="bcard__inner"><div class="bcard__top"><span class="bcard__year" data-i18n="v2.year"></span><span class="bcard__role" data-i18n="v2.role"></span></div><h3 class="bcard__org" data-i18n="v2.org"></h3><p data-i18n="v2.desc"></p></div></article>
+        <article class="bcard bcard--orange reveal"><div class="bcard__inner"><div class="bcard__top"><span class="bcard__year" data-i18n="v3.year"></span><span class="bcard__role" data-i18n="v3.role"></span></div><h3 class="bcard__org" data-i18n="v3.org"></h3><p data-i18n="v3.desc"></p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__wrapper">
+      <div class="contact__heading reveal">
+        <span class="eyebrow" data-i18n="contact.eyebrow"></span>
+        <h2 class="contact__title" data-i18n="contact.title"></h2>
+        <p class="contact__desc" data-i18n="contact.desc"></p>
+      </div>
+      <div class="contact__layout">
+        <article class="form-card reveal">
+          <form class="form" id="form" novalidate>
+            <div class="form__heading"><h3 data-i18n="form.title"></h3><p data-i18n="form.sub"></p></div>
+            <div class="form__row">
+              <label class="field"><span data-i18n="form.name"></span><input name="name" data-i18n-ph="form.namePh" required></label>
+              <label class="field"><span data-i18n="form.email"></span><input name="email" type="email" data-i18n-ph="form.emailPh" required></label>
+            </div>
+            <label class="field"><span data-i18n="form.msg"></span><textarea name="message" rows="5" data-i18n-ph="form.msgPh" required></textarea></label>
+            <button class="btn btn--primary form__submit" type="submit"><span data-i18n="form.send"></span><span class="btn__icon">→</span></button>
+            <p class="form__status" id="status" data-i18n="form.status"></p>
+          </form>
+        </article>
+        <aside class="info">
+          <a class="icard icard--green reveal" href="mailto:shahad.ashammari67@gmail.com"><span class="icard__n">01</span><span class="icard__icon"><span class="slot slot--fill" data-img="contact-email-icon" data-fallback="@"></span></span><div><small data-i18n="info.1.label"></small><strong data-i18n="info.1.value"></strong></div><span class="icard__arrow">→</span></a>
+          <a class="icard icard--pink reveal" href="https://linkedin.com/in/shahad-ashammari-b862423a6" target="_blank" rel="noopener"><span class="icard__n">02</span><span class="icard__icon"><span class="slot slot--fill" data-img="contact-linkedin-icon" data-fallback="in"></span></span><div><small data-i18n="info.2.label"></small><strong data-i18n="info.2.value"></strong></div><span class="icard__arrow">→</span></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__top">
+        <span class="slot slot--logo slot--footer" data-img="logo-mark" data-fallback="SA"></span>
+        <nav><a href="#about" data-i18n="nav.about"></a><a href="#projects" data-i18n="nav.projects"></a><a href="#experience" data-i18n="nav.experience"></a><a href="#beyond-study" data-i18n="nav.volunteering"></a><a href="#contact" data-i18n="nav.contact"></a></nav>
+      </div>
+      <div class="footer__bottom"><span data-i18n="footer.credit"></span><span data-i18n="footer.rights"></span></div>
+    </div>
+  </footer>
+</main>
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
