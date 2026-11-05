@@ -112,6 +112,10 @@
       const img = document.createElement('img'); img.src = src; img.alt = ''; img.draggable = false; el.appendChild(img);
     });
   });
+  $$('.project__video').forEach((v) => {
+    const ready = () => { v.classList.add('is-ready'); v.play().catch(() => {}); };
+    if (v.readyState >= 3) ready(); else v.addEventListener('canplay', ready, { once: true });
+  });
   // CV buttons only appear once files/cv.pdf exists
   fetch('files/cv.pdf', { method: 'HEAD' }).then((r) => { if (r.ok) $$('#cvBtn, #cvIcon').forEach((el) => (el.hidden = false)); }).catch(() => {});
   $('#volCount').textContent = String($$('.bcard').length).padStart(2, '0');
