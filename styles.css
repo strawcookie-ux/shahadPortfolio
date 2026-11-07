@@ -442,3 +442,11 @@ html[dir="rtl"] .hero__desc { font-weight: 500; }
 .bcard__logo { width: auto; min-width: 60px; max-width: 160px; height: 60px; display: inline-block; }
 .bcard__logo .slot { width: auto; min-width: 40px; height: 100%; }
 .bcard__logo .slot img { width: auto; max-width: 100%; height: 100%; }
+
+/* ---------- Requested tweaks (Nov 2026) ---------- */
+/* About: logo fills the frame (asset trimmed to its artwork), centred, clear of the corner marks */
+.about__frame .about__logo { position: absolute; inset: 0; width: auto; height: auto; aspect-ratio: auto; padding: 46px; box-sizing: border-box; }
+/* Volunteering: a lone card on the last row sits in the centre column */
+@media (min-width: 961px) { .bcard:last-child:nth-child(3n+1) { grid-column: 2; } }
+/* Contact: inline brand icons */
+.icard__icon svg { display: block; width: 24px; height: 24px; fill: currentColor; }
